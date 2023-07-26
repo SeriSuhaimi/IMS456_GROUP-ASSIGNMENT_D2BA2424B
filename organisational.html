@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakeries & Pastries</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      #video-background 
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        background-size:inherit;
+        background-attachment: auto;
+    }
+    #video-background video 
+    {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: fill;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative; /* Add this line to make sub-menu positioning relative to the parent */
+}
+
+.menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu li:hover .sub-menu,
+.menu li:focus .sub-menu { /* Add this line to show sub-menu on focus */
+  display: block;
+}
+
+.menu li:hover .sub-menu li,
+.menu li:focus .sub-menu li { /* Add this line to show sub-menu items on focus */
+  display: block;
+}
+
+.menu li:hover .sub-menu li a,
+.menu li:focus .sub-menu li a { /* Add this line to apply styles to sub-menu item links on focus */
+  color: #333;
+}
+
+/* Add the media query for responsive design */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu li .sub-menu {
+    display: none;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .menu li:focus .sub-menu {
+    display: block;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <div id="video-background">
+    <video autoplay loop muted>
+      <source src="images/2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li>
+        <a href="#our-menu">Our Menu</a>
+        <ul class="sub-menu">
+          <li><a href="#gluten-and-nut-free">Gluten and Nut Free</a></li>
+          <li><a href="#special-menu">Special Menu</a></li>
+          <li><a href="#beverages">Beverages</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#our-company">Our Company</a>
+        <ul class="sub-menu">
+          <li><a href="#history">History</a></li>
+          <li><a href="#organisational-chart">Organisational Chart</a></li>
+          <li><a href="#career-offer">Career Offer</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#our-promotion">Our Promotion</a>
+        <ul class="sub-menu">
+          <li><a href="#happy-anniversary">Happy Anniversary</a></li>
+          <li><a href="#merdeka-special">Merdeka Special</a></li>
+          <li><a href="#happy-25th">Happy 25th</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#our-services">Our Services</a>
+        <ul class="sub-menu">
+          <li><a href="#halal-policy">Halal Policy</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="#contact-details">Contact Details</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Additional content for each section goes here -->
+
+</body>
+</html>
